@@ -1,21 +1,25 @@
 // wrap and re-implement default console methods
 const myConsole = (function(defaultConsole){
+  let myConsoleAction = () => {};
   return {
+    setMyConsoleAction: function(f) {
+      myConsoleAction = f;
+    },
     log: function(message){
       defaultConsole.log(message);
-      alert('[Tee-console - Log]: ' + message);
+      myConsoleAction('[Tee-console - Log]: ' + message);
     },
     info: function (message) {
       defaultConsole.info(message);
-      alert('[Tee-console - Info]: ' + message);
+      myConsoleAction('[Tee-console - Info]: ' + message);
     },
     warn: function (message) {
       defaultConsole.warn(message);
-      alert('[Tee-console - Warning]: ' + message);
+      myConsoleAction('[Tee-console - Warning]: ' + message);
     },
     error: function (message) {
       defaultConsole.error(message);
-      alert('[Tee-console - Error]: ' + message);
+      myConsoleAction('[Tee-console - Error]: ' + message);
     }
   };
 }(window.console));

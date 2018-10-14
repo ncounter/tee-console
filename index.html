@@ -11,8 +11,10 @@
     <button onClick="error();" >error</button>
 
     <script>
+      console.setMyConsoleAction((message) => { alert(message) });
+
       function log() {
-        console.log('this is a log message')
+        console.log('this is a log message');
       }
 
       function info() {
