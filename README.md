@@ -2,6 +2,9 @@
 It is a wrapper of the Javascript console: with `tee-console.js` it is possible to add an additional function to **handle console messages**. It prints the message via the default console function and **it does something more** with the it.
 
 ## How to use
+A complete and useful example is available in the [`index.html`](https://github.com/ncounter/tee-console/blob/master/index.html) page.
+
+The following is the minimal code needed to see `tee-console.js` in action.
 ```html
 <script type="text/javascript" src="tee-console.js"></script>
 
